@@ -26,7 +26,7 @@ function Login() {
         <Input type="email" placeholder="@gmail.com" required />
         <TypeItem>Password</TypeItem>
         <Input type="password" placeholder="*******************" required />
-        <Button onClick={handleLogin}>Sign In</Button>
+        <Button onSubmit={handleLogin}>Sign In</Button>
       </LoginForm>
     </Container>
   );
