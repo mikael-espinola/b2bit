@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -41,10 +42,11 @@ export const Input = styled.input`
 `;
 export const Button = styled.button`
   padding: 0.9em;
-  background-color: #092762;
+  background-color: #002274;
   color: #fff;
   border-radius: 0.6em;
   margin: 1.2em 0;
-  cursor: pointer;
   border: none;
+  text-align: center;
+  cursor: pointer;
 `;

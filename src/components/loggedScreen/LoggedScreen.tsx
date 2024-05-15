@@ -1,10 +1,16 @@
 import React, { MouseEventHandler } from "react";
 import { Container, HeaderContainer, Button } from "./Style";
 import Profile from "../profile/Profile";
+import { useNavigate } from "react-router-dom";
+
 function LoggedScreen() {
+  const navigate = useNavigate();
+
   const handleLogout: MouseEventHandler = (event) => {
     event.preventDefault();
+    navigate("/");
   };
+
   return (
     <Container>
       <HeaderContainer>
