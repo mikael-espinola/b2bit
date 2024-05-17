@@ -1,10 +1,18 @@
 import React, { MouseEventHandler } from "react";
 import { Container, HeaderContainer, Button } from "./Style";
 import Profile from "../profile/Profile";
-function LoggedScreen() {
+import { useNavigate } from "react-router-dom";
+
+function UserScreen() {
+  const navigate = useNavigate();
+
   const handleLogout: MouseEventHandler = (event) => {
     event.preventDefault();
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/");
   };
+
   return (
     <Container>
       <HeaderContainer>
@@ -15,4 +23,4 @@ function LoggedScreen() {
   );
 }
 
-export default LoggedScreen;
+export default UserScreen;

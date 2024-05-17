@@ -26,7 +26,7 @@ export const PicTitle = styled.span`
 
 export const LogoContainer = styled.div`
   width: 50px;
-  width: 50px;
+  min-height: 50px;
   margin: 0.4em 0;
 `;
 

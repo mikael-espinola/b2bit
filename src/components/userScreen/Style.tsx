@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: #e4edf3;
   display: flex;
@@ -17,11 +17,12 @@ export const HeaderContainer = styled.header`
 
 export const Button = styled.button`
   padding: 0.9em;
-  background-color: #092762;
+  background-color: #002274;
   border: none;
   border-radius: 0.6em;
   width: 15em;
   color: #fff;
   margin: 0 1em 0.3em 0;
   cursor: pointer;
+  text-align: center;
 `;
