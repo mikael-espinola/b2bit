@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -13,7 +12,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
   width: 280px;
   height: 90px;
-  margin: 1em 1em 2em 1em;
+  margin: 1em 1em 1em 1em;
 `;
 export const Image = styled.img`
   width: 100%;
@@ -49,4 +48,17 @@ export const Button = styled.button`
   border: none;
   text-align: center;
   cursor: pointer;
+`;
+
+export const ErrorContainer = styled.div`
+  padding: 0.2em;
+  margin: 0.3em;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ErrorSpan = styled.span`
+  font-size: 12px;
+  color: red;
+  margin-left: 0.2em;
 `;

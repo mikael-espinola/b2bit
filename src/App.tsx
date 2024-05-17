@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Container } from "./Style";
-import Login from "./components/login/Login";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [status, setStatus] = useState(false);
   return (
     <Container>
-      <Login />
+      <Outlet />
     </Container>
   );
 }

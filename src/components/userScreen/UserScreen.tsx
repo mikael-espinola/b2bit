@@ -3,11 +3,13 @@ import { Container, HeaderContainer, Button } from "./Style";
 import Profile from "../profile/Profile";
 import { useNavigate } from "react-router-dom";
 
-function LoggedScreen() {
+function UserScreen() {
   const navigate = useNavigate();
 
   const handleLogout: MouseEventHandler = (event) => {
     event.preventDefault();
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     navigate("/");
   };
 
@@ -21,4 +23,4 @@ function LoggedScreen() {
   );
 }
 
-export default LoggedScreen;
+export default UserScreen;
