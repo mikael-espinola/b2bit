@@ -1,10 +1,6 @@
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import {
-  HashRouter,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import UserScreen from "./components/userScreen/UserScreen";
 
 import { GlobalStyle } from "./GlobalStyle";
@@ -13,11 +9,11 @@ import { UserProvider } from "./components/userContext/UserContext";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/b2bit/",
     element: <App />,
     children: [
-      { path: "/", element: <Login /> },
-      { path: "/user", element: <UserScreen /> },
+      { path: "/b2bit/", element: <Login /> },
+      { path: "/b2bit/user", element: <UserScreen /> },
     ],
   },
 ]);
@@ -27,9 +23,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <UserProvider>
-    <HashRouter basename="/b2bit">
-      <RouterProvider router={router} />
-    </HashRouter>
+    <RouterProvider router={router} />
     <GlobalStyle />
   </UserProvider>
 );
