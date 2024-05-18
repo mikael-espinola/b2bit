@@ -103,7 +103,7 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Image src="assets/b2bit_logo.png" />
+        <Image src="/assets/profile.png" />
       </Logo>
       {error && (
         <ErrorContainer>
