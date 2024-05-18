@@ -10,7 +10,7 @@ import {
   Logo,
   TypeItem,
 } from "./Style";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { SyncLoader } from "react-spinners";
 import { IoWarningOutline } from "react-icons/io5";
@@ -105,7 +105,7 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Picture1 src="assets/B2bit_logo.png" alt="Logo" />
+        <Picture1 src="b2bit/assets/B2bit_logo.png" alt="Logo" />
       </Logo>
       {error && (
         <ErrorContainer>
