@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
   width: 280px;
   height: 90px;
-  margin: 1em 1em 2em 1em;
+  margin: 1em 1em 1em 1em;
 `;
 export const Image = styled.img`
   width: 100%;
@@ -41,10 +41,25 @@ export const Input = styled.input`
 `;
 export const Button = styled.button`
   padding: 0.9em;
-  background-color: #092762;
+  background-color: #002274;
   color: #fff;
   border-radius: 0.6em;
   margin: 1.2em 0;
-  cursor: pointer;
   border: none;
+  text-align: center;
+  cursor: pointer;
+`;
+
+export const ErrorContainer = styled.div`
+  padding: 0.2em;
+  margin: 0.3em;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ErrorSpan = styled.span`
+  font-size: 12px;
+  color: red;
+  margin-left: 0.2em;
+  padding: 0.2em;
 `;

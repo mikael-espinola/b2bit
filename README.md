@@ -1,3 +1,4 @@
 # Frontend project b2bit
 
-In construction
+✔️ Login screen done!<br/>
+✔️ Logged and profile screen done!
