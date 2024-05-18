@@ -62,7 +62,7 @@ function Profile() {
           <PicTitle>Profile Picture</PicTitle>
           <LogoContainer>
             <Image
-              src={context.avatar ? context.avatar.high : "/assets/profile.png"}
+              src={context.avatar ? context.avatar.high : "assets/Profile.png"}
             />
           </LogoContainer>
           <DataContainer>
