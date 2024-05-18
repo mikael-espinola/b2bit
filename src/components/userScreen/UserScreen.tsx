@@ -6,8 +6,7 @@ import { useNavigate } from "react-router-dom";
 function UserScreen() {
   const navigate = useNavigate();
 
-  const handleLogout: MouseEventHandler = (event) => {
-    event.preventDefault();
+  const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/b2bit");
   };
