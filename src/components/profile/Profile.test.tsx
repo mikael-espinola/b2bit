@@ -18,7 +18,7 @@ describe("<Profile />", () => {
     axios.get.mockResolvedValue({
       data: {
         name: "Cliente",
-        email: "cliente@youdrive.com",
+        email: "cliente@email.com",
         avatar: null,
       },
     });
@@ -46,7 +46,7 @@ describe("<Profile />", () => {
     axios.get.mockResolvedValue({
       data: {
         name: "Cliente",
-        email: "cliente@youdrive.com",
+        email: "cliente@email.com",
         avatar: {
           high: "https://recebeuimagem.com/1",
         },
