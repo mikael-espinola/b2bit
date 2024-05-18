@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react";
+import { MouseEventHandler } from "react";
 import { Container, HeaderContainer, Button } from "./Style";
 import Profile from "../profile/Profile";
 import { useNavigate } from "react-router-dom";

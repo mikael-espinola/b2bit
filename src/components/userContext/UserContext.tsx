@@ -1,7 +1,12 @@
-import { Children, createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 interface IUserContext {
-  avatar: null;
+  avatar: {
+    id: number;
+    high: string;
+    medium: string;
+    low: string;
+  };
   created: string;
   email: string;
   id: number;
@@ -21,7 +26,12 @@ type UserProviderProps = {
 
 export const UserProvider = ({ children }: UserProviderProps) => {
   const [user, setUser] = useState({
-    avatar: null,
+    avatar: {
+      id: 1,
+      high: "",
+      medium: "",
+      low: "",
+    },
     created: "",
     email: "",
     id: 0,

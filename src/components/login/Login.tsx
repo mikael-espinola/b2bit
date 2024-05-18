@@ -29,6 +29,7 @@ function Login() {
     let token = cloudToken ? JSON.parse(cloudToken) : "";
 
     if (token === "") {
+      navigate("/");
       return;
     } else {
       axios.interceptors.request.use((config) => {
@@ -53,8 +54,7 @@ function Login() {
           navigate("/user");
         })
         .catch((error) => {
-          error.response.status === 401 &&
-            alert("Favor, faça o login novamente.");
+          error.response.status === 401 && navigate("/");
         })
         .finally(() => {
           setStatusLoading(false);
@@ -103,14 +103,12 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Image src={require("../images/b2bit_logo.png")} />
+        <Image src="/assets/b2bit_logo.png" />
       </Logo>
       {error && (
         <ErrorContainer>
           <IoWarningOutline color="red" />
-          <ErrorSpan>
-            Erro nas credenciais. Verifique e tente novamente.
-          </ErrorSpan>
+          <ErrorSpan>Incorrect credentials. Check and try again.</ErrorSpan>
         </ErrorContainer>
       )}
       <LoginForm onSubmit={handleLogin}>

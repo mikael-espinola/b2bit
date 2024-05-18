@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   DataContainer,
   Image,
@@ -17,7 +17,6 @@ import { useNavigate } from "react-router-dom";
 
 function Profile() {
   const context = useUser();
-  const [statusLoading, setStatusLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,6 +24,7 @@ function Profile() {
     let token = cloudToken ? JSON.parse(cloudToken) : "";
 
     if (token === "") {
+      navigate("/");
       return;
     } else {
       axios.interceptors.request.use((config) => {
@@ -38,23 +38,19 @@ function Profile() {
         Accept: "application/json;version=v1_web",
         "Content-Type": "application/json",
       };
-
       axios
         .get(profileURL, { headers })
         .then((getResponse) => {
-          setStatusLoading(true);
           const user = getResponse.data;
           context.updateUserData(user);
 
           navigate("/user");
         })
         .catch((error) => {
-          error.response.status === 401 &&
-            alert("Favor, faça o login novamente.");
+          if (error.response.status === 401 || error.response.status === 403) {
+            alert("Please, Sign In again.");
+          }
           navigate("/");
-        })
-        .finally(() => {
-          setStatusLoading(false);
         });
     }
   }, []);
@@ -65,7 +61,9 @@ function Profile() {
         <Container>
           <PicTitle>Profile Picture</PicTitle>
           <LogoContainer>
-            <Image src={require("../images/profile.png")} />
+            <Image
+              src={context.avatar ? context.avatar.high : "/assets/profile.png"}
+            />
           </LogoContainer>
           <DataContainer>
             <UserData>
