@@ -105,7 +105,10 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Picture1 src={`assets/B2bit_logo.png`} alt="Logo" />
+        <Picture1
+          src={`${process.env.PUBLIC_URL}/assets/B2bit_logo.png`}
+          alt="Logo"
+        />
       </Logo>
       {error && (
         <ErrorContainer>
