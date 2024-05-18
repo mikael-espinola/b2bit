@@ -24,7 +24,7 @@ function Profile() {
     let token = cloudToken ? JSON.parse(cloudToken) : "";
 
     if (token === "") {
-      navigate("/");
+      navigate("/b2bit");
       return;
     } else {
       axios.interceptors.request.use((config) => {
@@ -44,13 +44,13 @@ function Profile() {
           const user = getResponse.data;
           context.updateUserData(user);
 
-          navigate("/user");
+          navigate("/b2bit/user");
         })
         .catch((error) => {
           if (error.response.status === 401 || error.response.status === 403) {
             alert("Please, Sign in again.");
           }
-          navigate("/");
+          navigate("/b2bit");
         });
     }
   }, []);
@@ -62,7 +62,7 @@ function Profile() {
           <PicTitle>Profile Picture</PicTitle>
           <LogoContainer>
             <Image
-              src={context.avatar ? context.avatar.high : "assets/profile.png"}
+              src={context.avatar ? context.avatar.high : "/assets/profile.png"}
             />
           </LogoContainer>
           <DataContainer>
