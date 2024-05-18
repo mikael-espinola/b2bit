@@ -106,7 +106,7 @@ function Login() {
     <Container>
       <Logo>
         <Picture1
-          src={`assets/B2bit_logo.png ?timestamp=${new Date().getTime()}`}
+          src={`assets/B2bit_logo.png?timestamp=${new Date().getTime()}`}
           alt="Logo"
         />
       </Logo>
