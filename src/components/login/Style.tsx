@@ -61,4 +61,5 @@ export const ErrorSpan = styled.span`
   font-size: 12px;
   color: red;
   margin-left: 0.2em;
+  padding: 0.2em;
 `;
