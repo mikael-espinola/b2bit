@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/b2bit/static/js/main.dbff121e.js",
+    "index.html": "/b2bit/index.html",
+    "main.dbff121e.js.map": "/b2bit/static/js/main.dbff121e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dbff121e.js"
+  ]
+}
