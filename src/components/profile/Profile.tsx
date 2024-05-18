@@ -48,7 +48,7 @@ function Profile() {
         })
         .catch((error) => {
           if (error.response.status === 401 || error.response.status === 403) {
-            alert("Please, Sign In again.");
+            alert("Please, Sign in again.");
           }
           navigate("/");
         });
