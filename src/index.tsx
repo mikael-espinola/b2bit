@@ -9,11 +9,11 @@ import { UserProvider } from "./components/userContext/UserContext";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/b2bit",
     element: <App />,
     children: [
-      { path: "/", element: <Login /> },
-      { path: "/user", element: <UserScreen /> },
+      { path: "/b2bit", element: <Login /> },
+      { path: "/b2bit/user", element: <UserScreen /> },
     ],
   },
 ]);

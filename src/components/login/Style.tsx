@@ -12,9 +12,9 @@ export const Container = styled.div`
 export const Logo = styled.div`
   width: 280px;
   height: 90px;
-  margin: 1em 1em 1em 1em;
+  margin: 1em;
 `;
-export const Image = styled.img`
+export const Picture1 = styled.img`
   width: 100%;
   height: 100%;
 `;

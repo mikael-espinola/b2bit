@@ -4,7 +4,7 @@ import {
   Container,
   ErrorContainer,
   ErrorSpan,
-  Image,
+  Picture1,
   Input,
   LoginForm,
   Logo,
@@ -29,7 +29,7 @@ function Login() {
     let token = cloudToken ? JSON.parse(cloudToken) : "";
 
     if (token === "") {
-      navigate("/");
+      navigate("/b2bit");
       return;
     } else {
       axios.interceptors.request.use((config) => {
@@ -51,10 +51,12 @@ function Login() {
           const user = getResponse.data;
           context.updateUserData(user);
 
-          navigate("/user");
+          navigate("/b2bit/user");
         })
         .catch((error) => {
-          error.response.status === 401 && navigate("/");
+          if (error.response.status === 401 || error.response.status === 403) {
+            navigate("/b2bit");
+          }
         })
         .finally(() => {
           setStatusLoading(false);
@@ -86,7 +88,7 @@ function Login() {
           localStorage.setItem("token", JSON.stringify(token));
           const user = postResponse.data.user;
           context.updateUserData(user);
-          navigate("/user");
+          navigate("/b2bit/user");
         }
       })
       .catch((error) => {
@@ -103,7 +105,7 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Image src="/assets/profile.png" />
+        <Picture1 src="assets/B2bit_logo.png" alt="Logo" />
       </Logo>
       {error && (
         <ErrorContainer>

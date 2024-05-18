@@ -10,7 +10,7 @@ function UserScreen() {
     event.preventDefault();
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    navigate("/");
+    navigate("/b2bit");
   };
 
   return (
