@@ -10,7 +10,7 @@ import { UserProvider } from "./components/userContext/UserContext";
 const router = createBrowserRouter(
   [
     {
-      path: "/b2bit",
+      path: "/",
       element: <App />,
       children: [
         { path: "/b2bit", element: <Login /> },
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/b2bit",
+    basename: "/b2bit/",
   }
 );
 
