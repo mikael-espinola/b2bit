@@ -9,8 +9,7 @@ function UserScreen() {
   const handleLogout: MouseEventHandler = (event) => {
     event.preventDefault();
     localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    navigate("/b2bit", { replace: true, state: { reload: true } });
+    navigate("/b2bit");
   };
 
   return (
