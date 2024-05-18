@@ -7,16 +7,21 @@ import { GlobalStyle } from "./GlobalStyle";
 import Login from "./components/login/Login";
 import { UserProvider } from "./components/userContext/UserContext";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        { path: "/", element: <Login /> },
+        { path: "user", element: <UserScreen /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      { path: "/", element: <Login /> },
-      { path: "/user", element: <UserScreen /> },
-    ],
-  },
-]);
+    basename: "/b2bit",
+  }
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
