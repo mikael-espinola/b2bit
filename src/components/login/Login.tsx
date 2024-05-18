@@ -15,6 +15,7 @@ import axios from "axios";
 import { SyncLoader } from "react-spinners";
 import { IoWarningOutline } from "react-icons/io5";
 import { useUser } from "../userContext/UserContext";
+import img from "../assets/B2bit_logo.png";
 
 function Login() {
   const [email, setEmail] = useState<string>("");
@@ -105,10 +106,7 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Picture1
-          src={`${process.env.PUBLIC_URL}/assets/B2bit_logo.png`}
-          alt="Logo"
-        />
+        <Picture1 src={img} alt="Logo" />
       </Logo>
       {error && (
         <ErrorContainer>
