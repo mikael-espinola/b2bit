@@ -62,11 +62,7 @@ function Profile() {
           <PicTitle>Profile Picture</PicTitle>
           <LogoContainer>
             <Image
-              src={
-                context.avatar
-                  ? context.avatar.high
-                  : "b2bit/assets/Profile.png"
-              }
+              src={context.avatar ? context.avatar.high : "/assets/Profile.png"}
             />
           </LogoContainer>
           <DataContainer>

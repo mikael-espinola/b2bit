@@ -105,7 +105,7 @@ function Login() {
   return (
     <Container>
       <Logo>
-        <Picture1 src="b2bit/assets/B2bit_logo.png" alt="Logo" />
+        <Picture1 src="/assets/B2bit_logo.png" alt="Logo" />
       </Logo>
       {error && (
         <ErrorContainer>
