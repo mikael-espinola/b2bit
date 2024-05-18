@@ -14,8 +14,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { SyncLoader } from "react-spinners";
 import { IoWarningOutline } from "react-icons/io5";
-import { useUser } from "../userContext/UserContext";
-import img from "../assets/B2bit_logo.png";
+import { useUser } from "../../components/userContext/UserContext";
+import img from "../../assets/B2bit_logo.png";
 
 function Login() {
   const [email, setEmail] = useState<string>("");

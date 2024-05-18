@@ -2,10 +2,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import UserScreen from "./components/userScreen/UserScreen";
+import UserScreen from "./pages/userScreen/UserScreen";
 
 import { GlobalStyle } from "./GlobalStyle";
-import Login from "./components/login/Login";
+import Login from "./pages/login/Login";
 import { UserProvider } from "./components/userContext/UserContext";
 
 const router = createBrowserRouter([

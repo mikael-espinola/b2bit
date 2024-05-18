@@ -14,6 +14,7 @@ import { Container } from "./Style";
 import { useUser } from "../userContext/UserContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import avatar from "../../assets/Profile.png";
 
 function Profile() {
   const context = useUser();
@@ -61,9 +62,7 @@ function Profile() {
         <Container>
           <PicTitle>Profile Picture</PicTitle>
           <LogoContainer>
-            <Image
-              src={context.avatar ? context.avatar.high : "assets/Profile.png"}
-            />
+            <Image src={context.avatar ? context.avatar.high : `${avatar}`} />
           </LogoContainer>
           <DataContainer>
             <UserData>

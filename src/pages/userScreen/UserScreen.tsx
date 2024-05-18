@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 import { Container, HeaderContainer, Button } from "./Style";
-import Profile from "../profile/Profile";
+import Profile from "../../components/profile/Profile";
 import { useNavigate } from "react-router-dom";
 
 function UserScreen() {
