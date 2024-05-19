@@ -36,10 +36,10 @@ describe("<Profile />", () => {
     expect(screen.getByRole("img")).toBeVisible();
     expect(screen.getByRole("img")).toHaveAttribute(
       "src",
-      "/assets/profile.png"
+      "../../assets/Profile.png"
     );
     expect(screen.getByText("Cliente")).toBeVisible();
-    expect(screen.getByText("cliente@youdrive.com")).toBeVisible();
+    expect(screen.getByText("cliente@email.com")).toBeVisible();
   });
   it("renders correctly with avatar", async () => {
     //@ts-ignore
