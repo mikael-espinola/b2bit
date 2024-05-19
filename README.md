@@ -2,6 +2,8 @@
 
 Este projeto implementa uma tela de login e uma homepage de perfil do usuário em uma aplicação web.
 
+### Acesse o deploy do app pelo link: `https://mikael-espinola.github.io/b2bit`
+
 ## Instalação
 
 1. Clone o repositório
